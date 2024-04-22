@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
-st.title('DASHBOARD DE CONTROLE :probing_cane:')
+st.title('DASHBOARD DE CONTROLE :technologist:')
 
 verification = None
 bar = st.sidebar
