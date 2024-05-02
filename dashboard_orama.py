@@ -4,7 +4,12 @@ import streamlit as st
 from datetime import datetime, timedelta
 import locale
 
-locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
+try:
+    locale.setlocale(locale.LC_TIME, 'pt_BR.UTF-8')
+except locale.Error:
+    # Se a localização não for suportada, use a localização padrão
+    locale.setlocale(locale.LC_TIME, 'en_US.UTF-8')
+
 st.set_page_config(layout="wide", initial_sidebar_state="expanded")
 
 st.title('DASHBOARD DE CONTROLE :technologist:')
